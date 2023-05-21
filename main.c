@@ -181,6 +181,8 @@ void printPendientes(Heap* grafo)
           if (strcmp(precedente->nombre, tarea->precedentes[j]) == 0 && precedente->completada)
           {
             tienePreComp = true;
+            free(tarea->precedentes[j]);
+            free(precedente->nombre);
             break;
           }
         }
