@@ -195,20 +195,6 @@ void printPendientes(Heap* grafo)
       }
     }
   }
-
-  /*
-  for (int i = 1; i < numPendientes; i++)
-  {
-    int j = i;
-    while (j > 0 && pendientes[j]->prioridad < pendientes[j - 1]->prioridad)
-    {
-      Tarea* temp = pendientes[j];
-      pendientes[j] = pendientes[j - 1];
-      pendientes[j - 1] = temp;
-      j--;
-    }
-  }
-  */
   
   printf("╭──────────────────────────────────────────────────────────╮\n");
   printf("│                    Tareas pendientes:                    │\n");
@@ -240,8 +226,6 @@ void printPendientes(Heap* grafo)
   free(pendientes);
   return;
 }
-
-
 
 
 // 4 //
