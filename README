@@ -25,13 +25,23 @@ OPCIONES QUE FUNCIONAN
 3.  Imprimir Tareas Pendientes(grafo)
 
 OPCIONES QUE NO FUNCIONAN
-1.  Marcar Tarea Completada(grafo, nombre): El error en esta función es que al momento de imprimir las tareas pendientes, si bien se elimimna de la lista la tarea completada, esta no se elimina de las tareas precedentes de las demás funciones.
+1.  Marcar Tarea Completada(grafo, nombre): El error en esta función es que al momento de imprimir las tareas pendientes, 
+si bien se elimimna de la lista la tarea completada, esta no se elimina de las tareas precedentes de las demás funciones.
 
 
 DESCRIPCION FUNCIONES:
-1.  Agregar Tarea (nombre, prioridad)
+1.  Agregar Tarea (nombre, prioridad):
+Verifica si el grafo se encuentra lleno, para asi reservar memoria de ser necesario. Luego, agrega la tarea ingresada al final 
+del grafo, guardando tambien la prioridad de esta. Al ya tener la tarea agregada, llama a la funcion ordenarHeapAscendente, la cual 
+como su nombre lo indica ordena el grafo recién editado ascendentemente, haciendo uso además de la funcion siftUp, que mueve 
+elementos hacia arriba. Hecho esto, el programa imprime la frase "La tarea se agregó correctamente!" para dar a entender que 
+todo funcionó correctamente.
 
-2.  Agregar Precedencia(grafo, tarea1, tarea2)
+2.  Agregar Precedencia(grafo, tarea1, tarea2):
+Esta función toma el grafo y una primera tarea que será la cual precede a una segunda tarea ingresada. Se busca en el grafo que 
+ambas tareas existan. Emite un mensaje si ambas tareas son iguales, si la segunda tarea ya tiene como precedente a la primera, 
+y si alguna de las dos o las dos tareas no existen en el grafo. Si ninguno de estos problemas ocurre, se guarda memoria para la 
+tarea precedente de la tarea ingresada, y se copia el nombre de la tarea precedente en la lista de precedentes. 
 
 3.  Imprimir Tareas Pendientes(grafo)
 
