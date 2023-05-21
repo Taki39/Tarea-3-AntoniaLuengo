@@ -1,1 +1,51 @@
+# Tarea-3-AntoniaLuengo
 
+# Guía de compilación y ejecución del programa:
+
+
+## Pasos para compilar y ejecutar el programa
+
+Para compilar y ejecutar el programa, sigue estos pasos:
+
+1. Clona el repositorio desde GitHub ejecutando el siguiente comando en tu terminal:
+    ```
+    git clone https://github.com/Taki39/Tarea-3-AntoniaLuengo.git
+    ```
+    
+2. Abre una terminal en el directorio en el que se encuentran los archivos `main.c` y los archivos que componene el programa:
+    - Makefile: Archivo Makefile para compilar y enlazar el proyecto.
+    - README: Documentación del proyecto.
+    - heap.c: Implementación del grafo.
+    - heap.h: Encabezado para el grafo.
+    - main.c: Código principal del programa.
+    - printFormato.c: Funciones de formato para la salida impresa.
+    - printformato.h: Encabezado para las funciones de formato.
+    - tareas.csv: Archivo con tareas.
+
+3. Escribe el comando `make -s` para compilar el programa:
+    ```
+    make -s
+    ```
+    
+4. Escribe el comando `./main` para ejecutar el programa:
+    ```
+    ./main.c
+    ```
+
+## Opciones que funcionan:
+1.  Agregar Tarea (nombre, prioridad)
+2.  Agregar Precedencia(grafo, tarea1, tarea2)
+3.  Imprimir Tareas Pendientes(grafo)
+
+## Opciones que no funcionan (parcialmente):
+1.  Marcar Tarea Completada(grafo, nombre): El error en esta función es que al momento de imprimir las tareas pendientes, si bien se elimimna de la lista la tarea completada, esta no se elimina de las tareas precedentes de las demás funciones.
+
+### 1.  Agregar Tarea (nombre, prioridad)
+
+### 2.  Agregar Precedencia(grafo, tarea1, tarea2)
+
+### 3.  Imprimir Tareas Pendientes(grafo)
+
+### 4.  Marcar Tarea Completada(grafo, nombre)
+
+Realicé esta tarea de forma individual, por lo que no agregaré coevaluación / autoevaluación
