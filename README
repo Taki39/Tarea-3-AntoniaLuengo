@@ -32,10 +32,10 @@ si bien se elimimna de la lista la tarea completada, esta no se elimina de las t
 DESCRIPCION FUNCIONES:
 1.  Agregar Tarea (nombre, prioridad):
 Verifica si el grafo se encuentra lleno, para asi reservar memoria de ser necesario. Luego, agrega la tarea ingresada al final 
-del grafo, guardando tambien la prioridad de esta. Al ya tener la tarea agregada, llama a la funcion ordenarHeapAscendente, la cual 
-como su nombre lo indica ordena el grafo recién editado ascendentemente, haciendo uso además de la funcion siftUp, que mueve 
-elementos hacia arriba. Hecho esto, el programa imprime la frase "La tarea se agregó correctamente!" para dar a entender que 
-todo funcionó correctamente.
+del grafo, guardando tambien la prioridad de esta. Al ya tener la tarea agregada, llama a la funcion ordenarHeapAscendente, 
+la cual como su nombre lo indica ordena el grafo recién editado ascendentemente, haciendo uso además de la funcion siftUp, 
+que mueve elementos hacia arriba. Hecho esto, el programa imprime la frase "La tarea se agregó correctamente!" para dar a 
+entender que todo funcionó correctamente.
 
 2.  Agregar Precedencia(grafo, tarea1, tarea2):
 Esta función toma el grafo y una primera tarea que será la cual precede a una segunda tarea ingresada. Se busca en el grafo que 
@@ -43,9 +43,19 @@ ambas tareas existan. Emite un mensaje si ambas tareas son iguales, si la segund
 y si alguna de las dos o las dos tareas no existen en el grafo. Si ninguno de estos problemas ocurre, se guarda memoria para la 
 tarea precedente de la tarea ingresada, y se copia el nombre de la tarea precedente en la lista de precedentes. 
 
-3.  Imprimir Tareas Pendientes(grafo)
+3.  Imprimir Tareas Pendientes(grafo):
+Crea una variable auxiliar tipo tarea para las pendientes y reserva memoria. Recorre el grafo y guarda en otra variable auxiliar 
+llamada tarea los datos de la tarea en la que se encuentra al recorrer. Si la tarea no está marcada como completada, se recorren 
+los precedentes y se busca si entre los precedentes se encuentra la tarea a eliminar. Si está, se libera el espacio de esta y se 
+elimina. Luego se imprime una tabla con las tareas pendientes, su prioridad y sus precedentes.
 
-4.  Marcar Tarea Completada(grafo, nombre)
+4.  Marcar Tarea Completada(grafo, nombre):
+Tomando el grafo y el nombre de la tarea para marcar como completada, se recorre el grafo guardando la tarea actual en una variable
+auxiliar, se compara el nombre de esta con el nombre ingresado. Si se encuentra, se crea otra varibale auxiliar con los mismos datos. 
+Si la tarea tienen precedentes, se imprime un mensaje de alerta que dice "seguro que deseas eliminar la tarea?". Si la respuesta es si, 
+se elimina; si es no, no hay cambios. Al eliminarla, se recorre nuevamente el grafo buscando las tareas en las que la tarea a eliminar 
+se encuentre entre sus precedentes. Si se encuentra, se borra; si no, pasa a la siguiente tarea. Luego, se disminuye en uno el tamaño 
+del grafo y se muestra un mensaje diciendo que la tarea ya se marco como completada y fue eliminada.
 
 
 
